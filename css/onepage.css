@@ -1,0 +1,26 @@
+.jvp-nav .active-step {
+    color: blue;
+}
+
+.jvp-nav span {
+    display: none;
+}
+
+.jvp-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.jvp-nav li {
+    display: inline;
+    padding: 2em;
+}
+
+.jvp-nav li a {
+    text-decoration: none;
+}
+
+.jvp-links {
+    display: none;
+}
+

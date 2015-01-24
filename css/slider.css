@@ -1,0 +1,29 @@
+.jvp-nav {
+    display: none;
+}
+
+.jvp-links {
+    list-style: none;
+}
+
+.jvp-next:after {
+    content: " ";
+    height: 0;
+    top: 50%;
+    left: 90%;
+    position: absolute;
+    width: 0;
+    border: 15px solid transparent;
+    border-left-color: #333;
+}
+
+.jvp-prev:before {
+    content: " ";
+    height: 0;
+    top: 50%;
+    left: 10%;
+    position: absolute;
+    width: 0;
+    border: 15px solid transparent;
+    border-right-color: #333;
+}

@@ -1,0 +1,134 @@
+.jvp-nav .completed-step {
+    background: darkgray;
+}
+
+.jvp-nav .active-step {
+    background: #0093d0;
+}
+
+.jvp-nav .active-step:after { 
+    border-left: 30px solid #0093d0;
+}
+
+.jvp-nav .completed-step:after { 
+    border-left: 30px solid darkgray;
+}
+
+.jvp-nav span {
+    display: block;
+    float: left;
+    font-size: 10px;
+    text-align:center;
+    width:15px;
+    margin: 2px 5px 0px 0px;
+    line-height:15px;
+    color: #ccc;
+    background: #FFF;
+    border: 2px solid #CCC;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+.jvp-nav { 
+    list-style: none; 
+    overflow: hidden;
+}
+
+.jvp-nav li { 
+    float: left; 
+}
+
+.jvp-nav li a {
+    color: white;
+    text-decoration: none; 
+    padding: 10px 0 10px 65px;
+    background: lightgray;
+    position: relative; 
+    display: block;
+    float: left;
+}
+
+.jvp-nav li a:after { 
+    content: " "; 
+    display: block; 
+    width: 0; 
+    height: 0;
+    border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid lightgray;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; 
+    left: 100%;
+    z-index: 2; 
+}
+
+.jvp-nav li a:before { 
+    content: " "; 
+    display: block; 
+    width: 0; 
+    height: 0;
+    border-top: 50px solid transparent;       
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px; 
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1; 
+}
+
+/* = Left/Right Buttons (MIT License jViewpoint)
+----------------------------*/
+.jvp-links {
+    list-style: none;
+    overflow: hidden;
+    width: 400px;
+    top: 55%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.jvp-links ul {
+    float: left;
+}
+
+.jvp-links li {
+    display: inline;
+}
+
+.jvp-links li a {
+    padding: 5px 10px;
+    color: #0093d0;
+    text-decoration: none;
+    border: 1px solid #0093d0;
+    display: block;
+    width: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.jvp-links .jvp-prev {
+    float: left;
+}
+
+.jvp-links .jvp-next {
+    float: right;
+}
+
+.jvp-links li a:hover {
+    color: #fff;
+    background: #0093d0;
+}
+
+.jvp-next:after {
+    content: "Next";
+}
+
+.jvp-prev:before {
+    content: "Prev";
+}
+
