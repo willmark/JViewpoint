@@ -1,0 +1,82 @@
+.jvp-nav span {
+    display: none;
+}
+
+.jvp-links {
+    display: none;
+}
+
+.jvp-nav li { 
+  /* Makes a horizontal row */
+  float: left; 
+	
+  /* So the psueudo elements can be
+     abs. positioned inside */
+  position: relative; 
+}
+.jvp-nav:not(a.active-step) {
+  border-bottom: solid thin #0093d0; 
+}
+.jvp-nav a.active-step {
+  color: #0093d0;
+  background: white;
+  border-top: solid thin #0093d0; 
+  border-right: solid thin #0093d0; 
+  border-left: solid thin #0093d0; 
+}
+.jvp-nav a { 
+  /* Make them block level
+     and only as wide as they need */
+  float: left; 
+  padding: 10px 40px; 
+  text-decoration: none;
+  
+  /* Default colors */ 
+  color: black;
+  background: lightgray; 
+  
+  /* Only round the top corners */
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+}
+.jvp-nav .active {
+  /* Highest, active tab is on top */
+  z-index: 3;
+}
+.jvp-nav .active a { 
+  /* Colors when tab is active */
+  background: white; 
+  color: black; 
+}
+.jvp-nav li:before, .jvp-nav li:after, 
+.jvp-nav li a:before, .jvp-nav li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+}
+/* Only the first, last, and active
+   tabs need pseudo elements at all */
+.jvp-nav li:last-child:after,   .jvp-nav li:last-child a:after,
+.jvp-nav li:first-child:before, .jvp-nav li:first-child a:before,
+.jvp-nav .active:after,   .jvp-nav .active:before, 
+.jvp-nav .active a:after, .jvp-nav .active a:before {
+  content: "";
+}
+.jvp-nav .active:before, .jvp-nav .active:after {
+  background: white; 
+  
+  /* Squares below circles */
+  z-index: 1;
+}
+
+.jvp-nav li a:before {
+  left: -20px;
+}
+.jvp-nav li a:after {
+  right: -20px;
+}
