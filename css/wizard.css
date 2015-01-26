@@ -2,11 +2,11 @@
     background: darkgray;
 }
 
-.jvp-nav .active-step a {
+.jvp-nav a.active-step {
     background: #0093d0;
 }
 
-.jvp-nav .active-step a:after { 
+.jvp-nav a.active-step:after { 
     border-left: 30px solid #0093d0;
 }
 
