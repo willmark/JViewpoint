@@ -10,7 +10,7 @@
     .example-content {
         width: 30%;
         height: 20%;
-        position: fixed;
+        height: 100vh;
         top: 30%;
         left: 40%;
         margin: auto;
@@ -27,6 +27,10 @@
 <body>
     <form>
       <div id="example">
+        <div>
+        <a class="jvp-next" jvp-button="next">Next</a>
+        <a class="jvp-prev" jvp-button="prev">Prev</a>
+        </div>
         <section jvp-nav-name="First">
             <div class="example-content">
                 <h1>First Page</h1>

@@ -9,9 +9,8 @@
         }
         .example-content {
             z-index: 1;
-            position: fixed;
-            top: 30%;
-            left: 40%;
+            height: 100vh;
+            padding-top: 30%;
             margin: auto;
         }
         img {
@@ -27,21 +26,26 @@
 <body>
     <form>
       <div id="example">
-        <section jvp-nav-name="First">
+        <ul class="jvp-nav">
+            <li><a jvp-step="1">First</a></li>
+            <li><a jvp-step="2">Second</a></li>
+            <li><a jvp-step="3">Third</a></li>
+        </ul>
+        <section id="first" jvp-nav-name="First">
             <div class="example-content">
                 <h1>First Page</h1>
                 <p>Content of first page.</p>
                 <input id="first" type="text">
             </div>
         </section>
-        <section jvp-nav-name="Second">
+        <section id="second" jvp-nav-name="Second">
             <div class="example-content">
                 <h1>Second Page</h1>
                 <p>Content of second page.</p>
                 <input id="second" type="text">
             </div>
         </section>
-        <section jvp-nav-name="Third">
+        <section id="third" jvp-nav-name="Third">
             <div class="example-content">
                 <h1>Third Page</h1>
                 <p>Content of third page.</p>
