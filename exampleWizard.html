@@ -2,24 +2,14 @@
 
 <head>
     <style>
-        #example {
-            width: 600px;
-            height: 300px;
-            margin: auto;
+        body {
+            overflow: hidden;
         }
         .example-content {
             z-index: 1;
-            position: fixed;
-            top: 30%;
-            left: 40%;
-            margin: auto;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            opacity: .5;
-            z-index: -1;
-        }
+            width: 30em;
+            padding-top: 3em;
+            text-align: center;
     </style>
     <link rel="stylesheet" type="text/css" href="css/wizard.css">
 </head>
@@ -27,32 +17,70 @@
 <body>
     <form>
       <div id="example">
-        <section jvp-nav-name="First">
+        <section class="jvp-target" jvp-nav-name="First">
+            <ul class="jvp-nav-container">
+                <li><a jvp-step="0" class="jvp-nav jvp-active">First<span>1</span></a></li>
+                <li><a jvp-step="1" class="jvp-nav">Second<span>2</span></a></li>
+                <li><a jvp-step="2" class="jvp-nav">Third<span>3</span></a></li>
+                <li><a jvp-step="3" class="jvp-nav">Done!<span>4</span></a></li>
+            </ul>
             <div class="example-content">
                 <h1>First Page</h1>
                 <p>Content of first page.</p>
                 <input id="first" type="text">
             </div>
+            <ul class="jvp-links">
+                <li><a class="jvp-nav jvp-next" jvp-button="next"></a></li>
+            </ul>
         </section>
-        <section jvp-nav-name="Second">
+        <section class="jvp-target" jvp-nav-name="Second">
+            <ul class="jvp-nav-container">
+                <li><a jvp-step="0" class="jvp-nav jvp-completed-step">First<span>1</span></a></li>
+                <li><a jvp-step="1" class="jvp-nav jvp-active">Second<span>2</span></a></li>
+                <li><a jvp-step="2" class="jvp-nav">Third<span>3</span></a></li>
+                <li><a jvp-step="3" class="jvp-nav">Done!<span>4</span></a></li>
+            </ul>
             <div class="example-content">
                 <h1>Second Page</h1>
                 <p>Content of second page.</p>
                 <input id="second" type="text">
             </div>
+            <ul class="jvp-links">
+                <li><a class="jvp-nav jvp-next" jvp-button="next"></a></li>
+                <li><a class="jvp-nav jvp-prev" jvp-button="prev"></a></li>
+            </ul>
         </section>
-        <section jvp-nav-name="Third">
+        <section class="jvp-target" jvp-nav-name="Third">
+            <ul class="jvp-nav-container">
+                <li><a jvp-step="0" class="jvp-nav jvp-completed-step">First<span>1</span></a></li>
+                <li><a jvp-step="1" class="jvp-nav jvp-completed-step">Second<span>2</span></a></li>
+                <li><a jvp-step="2" class="jvp-nav jvp-active">Third<span>3</span></a></li>
+                <li><a jvp-step="3" class="jvp-nav">Done!<span>4</span></a></li>
+            </ul>
             <div class="example-content">
                 <h1>Third Page</h1>
                 <p>Content of third page.</p>
                 <input id="third" type="text">
             </div>
+            <ul class="jvp-links">
+                <li><a class="jvp-nav jvp-finish" jvp-button="finish"></a></li>
+                <li><a class="jvp-nav jvp-prev" jvp-button="prev"></a></li>
+            </ul>
         </section>
-        <section jvp-nav-name="Finish">
+        <section class="jvp-target" jvp-nav-name="Finish">
+            <ul class="jvp-nav-container">
+                <li><a jvp-step="0" class="jvp-nav jvp-completed-step">First<span>1</span></a></li>
+                <li><a jvp-step="1" class="jvp-nav jvp-completed-step">Second<span>2</span></a></li>
+                <li><a jvp-step="2" class="jvp-nav jvp-completed-step">Third<span>3</span></a></li>
+                <li><a jvp-step="3" class="jvp-nav jvp-active">Done!<span>4</span></a></li>
+            </ul>
             <div class="example-content">
                 <h1>Finished!</h1>
                 <p>Last page is just a status indicating the steps are done.</p>
             </div>
+            <ul class="jvp-links">
+                <li><a class="jvp-nav jvp-prev" jvp-button="prev"></a></li>
+            </ul>
         </section>
       </div>
     </form>

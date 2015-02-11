@@ -1,12 +1,14 @@
-.jvp-nav span {
-    display: none;
+.jvp-target {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
 }
 
-.jvp-links {
-    display: none;
+.jvp-nav-container { 
+  position: fixed;
 }
 
-.jvp-nav li { 
+.jvp-nav-container li { 
   /* Makes a horizontal row */
   float: left; 
 	
@@ -14,17 +16,17 @@
      abs. positioned inside */
   position: relative; 
 }
-.jvp-nav:not(a.active-step) {
+.jvp-nav-container:not(a.jvp-active) {
   border-bottom: solid thin #0093d0; 
 }
-.jvp-nav a.active-step {
+.jvp-nav-container a.jvp-active {
   color: #0093d0;
   background: white;
   border-top: solid thin #0093d0; 
   border-right: solid thin #0093d0; 
   border-left: solid thin #0093d0; 
 }
-.jvp-nav a { 
+.jvp-nav-container a { 
   /* Make them block level
      and only as wide as they need */
   float: left; 
@@ -43,17 +45,17 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px; 
 }
-.jvp-nav .active {
+.jvp-nav-container .jvp-active {
   /* Highest, active tab is on top */
   z-index: 3;
 }
-.jvp-nav .active a { 
+.jvp-nav-container .jvp-active a { 
   /* Colors when tab is active */
   background: white; 
   color: black; 
 }
-.jvp-nav li:before, .jvp-nav li:after, 
-.jvp-nav li a:before, .jvp-nav li a:after {
+.jvp-nav-container li:before, .jvp-nav-container li:after, 
+.jvp-nav-container li a:before, .jvp-nav-container li a:after {
   /* All pseudo elements are 
      abs. positioned and on bottom */
   position: absolute;
@@ -61,22 +63,22 @@
 }
 /* Only the first, last, and active
    tabs need pseudo elements at all */
-.jvp-nav li:last-child:after,   .jvp-nav li:last-child a:after,
-.jvp-nav li:first-child:before, .jvp-nav li:first-child a:before,
-.jvp-nav .active:after,   .jvp-nav .active:before, 
-.jvp-nav .active a:after, .jvp-nav .active a:before {
+.jvp-nav-container li:last-child:after,   .jvp-nav-container li:last-child a:after,
+.jvp-nav-container li:first-child:before, .jvp-nav-container li:first-child a:before,
+.jvp-nav-container .jvp-active:after,   .jvp-nav-container .jvp-active:before, 
+.jvp-nav-container .jvp-active a:after, .jvp-nav-container .jvp-active a:before {
   content: "";
 }
-.jvp-nav .active:before, .jvp-nav .active:after {
+.jvp-nav-container .jvp-active:before, .jvp-nav-container .jvp-active:after {
   background: white; 
   
   /* Squares below circles */
   z-index: 1;
 }
 
-.jvp-nav li a:before {
+.jvp-nav-container li a:before {
   left: -20px;
 }
-.jvp-nav li a:after {
+.jvp-nav-container li a:after {
   right: -20px;
 }
