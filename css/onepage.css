@@ -4,15 +4,11 @@
     width: 100vw;
 }
 
-.jvp-nav .active-step {
+.jvp-nav.jvp-active {
     color: blue;
 }
 
-.jvp-nav span {
-    display: none;
-}
-
-.jvp-nav {
+.jvp-nav-container {
     position: fixed;
     padding: 0;
     width: 100%;
@@ -20,16 +16,12 @@
     list-style: none;
 }
 
-.jvp-nav li {
+.jvp-nav-container > * {
     display: inline;
     padding: 2em;
 }
 
-.jvp-nav li a {
+.jvp-nav.a {
     text-decoration: none;
-}
-
-.jvp-links {
-    display: none;
 }
 

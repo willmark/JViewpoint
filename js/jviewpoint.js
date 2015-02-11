@@ -27,6 +27,8 @@
         this.container = element;
         this.collection = element.getElementsByClassName('jvp-target');
         this.nav = element.getElementsByClassName('jvp-nav');
+        this.currentNav = this.nav[0];
+        this.currentNav.className = this.currentNav.className + ' jvp-active'; 
         this.currentIndex = 0;
         this.currentTarget = this.collection[0];
 
@@ -51,6 +53,9 @@
                 default:
                     var step = event.target.getAttribute('jvp-step');
                     if (step) {
+                        this.jviewpoint.currentNav.className = this.jviewpoint.currentNav.className.replace('jvp-active', '') || this.jviewpoint.currentNav.className; 
+                        this.jviewpoint.currentNav = event.target;
+                        this.jviewpoint.currentNav.className = this.jviewpoint.currentNav.className + ' jvp-active'; 
                         this.jviewpoint.moveTo(step);
                         this.jviewpoint.callback(this.jviewpoint.currentIndex + 1, this.jviewpoint.collection.length, this.jviewpoint.currentTarget);
                     }
